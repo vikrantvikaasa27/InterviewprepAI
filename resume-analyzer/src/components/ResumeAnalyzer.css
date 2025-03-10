@@ -1,0 +1,344 @@
+.resume-analyzer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+  }
+  
+  .analyzer-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .analyzer-header h1 {
+    color: #2c3e50;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .analyzer-header p {
+    color: #000000;
+    font-size: 1.1rem;
+  }
+  
+  .analyzer-content {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  .upload-section {
+    padding: 2rem;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .file-upload-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .file-upload {
+    position: relative;
+  }
+  
+  .upload-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 1rem;
+    border: 2px dashed #3498db;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: #f7fbfe;
+  }
+  
+  .upload-label:hover {
+    background-color: #e6f3fc;
+    border-color: #2980b9;
+  }
+  
+  .upload-icon {
+    font-size: 1.5rem;
+    color: #3498db;
+  }
+  
+  input[type="file"] {
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  
+  .job-description {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .job-description label {
+    font-weight: 600;
+    color: #2c3e50;
+  }
+  
+  textarea {
+    width: 100%;
+    height: 150px;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    resize: none;
+    font-family: inherit;
+  }
+  
+  textarea:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+  }
+  
+  .analyze-button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .analyze-button:hover {
+    background-color: #2980b9;
+  }
+  
+  .analyze-button:disabled {
+    background-color: #bdc3c7;
+    cursor: not-allowed;
+  }
+  
+  .error-message {
+    margin-top: 1rem;
+    color: #e74c3c;
+    font-weight: 500;
+    text-align: center;
+  }
+  
+  .results-section {
+    padding: 2rem;
+  }
+  
+  .tabs {
+    display: flex;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 2rem;
+  }
+  
+  .tabs button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 1rem 1.5rem;
+    background: none;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #7f8c8d;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-bottom: 3px solid transparent;
+  }
+  
+  .tabs button:hover {
+    color: #3498db;
+  }
+  
+  .tabs button.active {
+    color: #3498db;
+    border-bottom-color: #3498db;
+  }
+  
+  .tab-content {
+    animation: fadeIn 0.5s ease;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  .score-container {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-bottom: 2rem;
+  }
+  
+  .score-circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    color: white;
+    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+  }
+  
+  .score-circle h2 {
+    font-size: 2.5rem;
+    margin: 0;
+  }
+  
+  .score-circle p {
+    margin: 5px 0 0;
+    font-size: 0.9rem;
+    opacity: 0.9;
+  }
+  
+  .summary-text {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 6px;
+  }
+  
+  .summary-text h3 {
+    margin-top: 0;
+    color: #2c3e50;
+  }
+  
+  .skills-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+  
+  .skills-section h3 {
+    color: #2c3e50;
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+  
+  .skills-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .skills-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0.5rem 0;
+  }
+  
+  .icon-success {
+    color: #2ecc71;
+  }
+  
+  .icon-warning {
+    color: #e74c3c;
+  }
+  
+  .improvements-list {
+    padding-left: 1.5rem;
+  }
+  
+  .improvement-item {
+    margin-bottom: 1rem;
+    line-height: 1.5;
+  }
+  
+  .jobs-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .job-card {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .job-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .job-card h4 {
+    color: #2c3e50;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+  }
+  
+  .job-company {
+    color: #7f8c8d;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+  }
+  
+  .job-match {
+    color: #3498db;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  
+  .job-description {
+    color: #7f8c8d;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  .job-link {
+    display: inline-block;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+  }
+  
+  .job-link:hover {
+    background-color: #2980b9;
+  }
+  
+  @media (max-width: 768px) {
+    .skills-container {
+      grid-template-columns: 1fr;
+    }
+    
+    .score-container {
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+    }
+    
+    .tabs {
+      flex-wrap: wrap;
+    }
+    
+    .tabs button {
+      flex: 1 1 40%;
+      text-align: center;
+      justify-content: center;
+    }
+  }
